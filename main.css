@@ -1,0 +1,59 @@
+.container{
+  display: grid;
+  grid-template-areas: "lu ru"
+                        "ld rd";
+  background-color: grey;
+  height: 300px;
+  width: 300px;
+  column-gap: 50px;
+  row-gap: 50px;
+  padding: 20px;
+}
+
+.left-up{
+  grid-area: lu;
+  background-color: yellow;
+  height: 100px;
+  width: 100px;
+  justify-self: center;
+}
+
+.right-up{
+  grid-area: ru;
+  background-color: yellow;
+  height: 100px;
+  width: 100px;
+  justify-self: center;
+}
+
+.left-down{
+  grid-area: ld;
+  background-color: yellow;
+  height: 100px;
+  width: 100px;
+  justify-self: center;
+}
+
+.lu-dragzone{
+  grid-area: lu;
+  height: 100px;
+  width: 100px;
+}
+
+.ld-dragzone{
+  grid-area: ld;
+  height: 100px;
+  width: 100px;
+}
+
+.ru-dragzone{
+  grid-area: ru;
+  height: 100px;
+  width: 100px;
+}
+
+.rd-dragzone{
+  grid-area: rd;
+  height: 100px;
+  width: 100px;
+}

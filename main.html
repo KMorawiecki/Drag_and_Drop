@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript">
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
+
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+      }
+    </script>
+</head>
+<body>
+    <div class = "container">
+      <div id = "drag1" class = "lu-dragzone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div id = "drag2" class = "ru-dragzone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div id = "drag3" class = "ld-dragzone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div id = "drag4" class = "rd-dragzone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+        <div class = "left-up"
+             id = "box1"
+             draggable="true"
+             ondragstart="drag(event)"> 1 </div>
+        <div class = "left-down"
+             id = "box2"
+             draggable="true"
+             ondragstart="drag(event)"> 2 </div>
+        <div class = "right-up"
+             id = "box3"
+             draggable="true"
+             ondragstart="drag(event)"> 3 </div>
+    </div>
+</body>
+</html>
